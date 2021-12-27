@@ -120,11 +120,12 @@
   /* Mobile Nav */
   .btn-mobile-nav {
     display: block;
+    z-index: 9999;
   }
 
   .main-nav {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.911);
+    background-color: rgba(255, 255, 255, 0.952);
     top: 0;
     left: 0;
     width: 100%;
