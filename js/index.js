@@ -2,6 +2,7 @@ const yearEl = document.querySelector(".year");
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
 const allLinks = document.querySelectorAll("a:link");
+const sectionHeroEl = document.querySelector(".section-hero");
 
 // Setting current Year
 const year = new Date().getFullYear();
@@ -38,3 +39,25 @@ allLinks.forEach((link) => {
     }
   });
 });
+
+///////////////////////////
+// sticky nav
+
+const observer = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+observer.observe(sectionHeroEl);
