@@ -41,6 +41,7 @@ box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  /* scroll-behavior: smooth; */
 }
 
 body {
